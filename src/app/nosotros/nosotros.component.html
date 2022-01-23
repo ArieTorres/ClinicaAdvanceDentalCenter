@@ -1,0 +1,79 @@
+<app-nav-simple></app-nav-simple>
+
+<div class="containerTittle">
+  <p class="textTittle">¿Quienes somos?</p>
+</div>
+
+<div class="containerUs">
+  <div class="containerNosotros">
+    <p class="textQuienesSomos">
+      Somos una <b>clinica odontológica especializada </b> en la prestación de
+      servicios de salud oral, contamos con un grupo selecto de especialistas,
+      modernas instalaciones y equipos de última tecnología que aseguran
+      calidad, comodidad y seguridad de los pacientes en todos nuestros
+      procedimientos. Nuestra pasión es brindar bienestar y transformar la vida
+      de nuestros pacientes a través de su salud oral.
+    </p>
+  </div>
+
+  <div class="containerMV">
+    <div class="MV" id="mision">
+      <p class="titleMV">Misión</p>
+      <p class="textMV">
+        Brindar a los pacientes de <b>ADVANCED DENTAL CENTER </b> una atención
+        de manera integral con un alto compromiso ético y alta calidad, a través
+        de la excelencia en la prestación del servicio. Que garantice la
+        solución de las patologías odontológicas, con un óptimo nivel científico
+        y tecnológico que permita detectar y satisfacer las necesidades de los
+        usuarios enfocados en la seguridad del paciente.
+      </p>
+    </div>
+
+    <div class="MV" id="vision">
+      <p class="titleMV">Visión</p>
+      <p class="textMV">
+        Al año 2024 ser una clinica odontológica con gran reconocimiento en el
+        departamento de córdoba por proveer servicios de alta calidad,
+        eficiencia y oportunidad en sus diferentes especialidades con enfoque a
+        la seguridad de los pacientes para contribuir al bienestar integral de
+        ellos.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="containerEstadosFinancieros">
+  <div class="titleFinanciero">
+    <p>Estados financieros</p>
+    <img
+      (click)="updateViewStatusF()"
+      *ngIf="!statusFlecha"
+      class="imgFlecha"
+      src="assets/image/iconos/flecha.png"
+      alt=""
+    />
+    <img
+      (click)="updateViewStatusF()"
+      *ngIf="statusFlecha"
+      class="imgFlecha"
+      id="imgFlechaArriba"
+      src="assets/image/iconos/flecha.png"
+      alt=""
+    />
+  </div>
+
+  <div class="containerArchivos" *ngIf="viewStatusF">
+    <div
+      class="linkDescarga"
+      (click)="redirectURL(estado.url)"
+      *ngFor="let estado of estadosFinancieros"
+    >
+      {{ estado.name }}
+    </div>
+  </div>
+
+  <div class="linea"></div>
+</div>
+
+<app-form-contact></app-form-contact>
+<app-footer></app-footer>

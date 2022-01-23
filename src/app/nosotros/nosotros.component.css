@@ -1,0 +1,176 @@
+.containerTittle {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+
+  background-image: url("src/assets/image/fondoNosotros.jpg");
+  background-repeat: no-repeat;
+  background-position: 20% 45%;
+  background-size: 100% auto;
+}
+
+.textTittle {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  color: black;
+  font-size: 35px;
+}
+
+@media screen and (max-width: 400px) {
+  .containerTittle {
+    background-position: 20% 45%;
+    background-size: auto 100%;
+  }
+}
+
+.containerUs {
+  width: 99.8%;
+  height: auto;
+}
+
+.containerNosotros {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.containerNosotros:hover {
+  /*background-color: rgba(253, 206, 7, 0.658);*/
+  background-color: #88dfff;
+  border-radius: 8px;
+}
+
+.textQuienesSomos:hover {
+  font-size: 24px;
+}
+
+.containerMV {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.MV {
+  width: 40%;
+  height: auto;
+}
+
+.textQuienesSomos {
+  color: rgb(125, 125, 127);
+  font-size: 22px;
+  text-align: justify;
+  margin: 20px;
+}
+
+.titleMV {
+  font-weight: 700;
+  font-size: 25px;
+  text-align: center;
+}
+
+.textMV {
+  color: rgb(125, 125, 127);
+  font-size: 22px;
+  text-align: justify;
+  padding: 10px;
+}
+
+@media screen and (max-width: 880px) {
+  .containerMV {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .MV {
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .MV {
+    width: 95%;
+  }
+  .containerNosotros {
+    width: 95%;
+  }
+}
+
+.containerEstadosFinancieros {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.titleFinanciero{
+  font-weight: 700;
+  /*background-color: rgba(253, 206, 7, 0.658);*/
+  background-color: #88dfff;
+  color: rgb(37, 37, 36);
+  font-size: 23px;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+}
+
+.containerArchivos{
+  height: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  width: 90%;
+  margin-top: 8px;
+  border-radius: 8px;
+}
+
+.linkDescarga{
+  text-align: start;
+  margin: 10px;
+  text-decoration: none;
+  color: rgb(125, 125, 127);
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.linkDescarga:hover{
+  color: rgb(68, 68, 231);
+  font-size: 22px;
+}
+
+.linea{
+  margin: auto;
+  /*border: 2px solid rgba(253, 206, 7, 0.658);*/
+  border: 2px solid #88dfff;
+  width: 90%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.imgFlecha{
+  width: 20px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+#imgFlechaArriba{
+  transform: rotate(-180deg);
+}

@@ -1,0 +1,181 @@
+<app-nav-simple>
+</app-nav-simple>
+
+<div class="containerTittle">
+  <p class="textTittle">Política de Participación Social en Salud</p>
+</div>
+
+<div class="containerPP">
+  <div class="containerPoliticas">
+    <p class="textPoliticas">
+        ¿Qué dice la norma y la LEY ESTATUTARIA DE SALUD (LES) en relación con el derecho a la participación en salud?
+        <br><br>
+        Es necesario recordar que la Ley 100 de 1993, en su artículo 153, modificado por el artículo 3 de la Ley 1438 de 2011,
+        estableció como principio del Sistema General de Seguridad Social en Salud, en su numeral 3.10, la participación social,
+        que es la intervención de la comunidad en la organización, control, gestión y fiscalización de las instituciones y
+        del Sistema en conjunto.
+        <br><br>
+        Y para tal efecto se reglamentó el Decreto 1757 de 1994, compilado en la parte 10 capítulo 1 título 1 del artículo
+        2.10.1.1.1 del Decreto Único 780 de 2016.
+    </p>
+  </div>
+</div>
+
+<br>
+<br>
+
+<div class="containerEvidencia">
+  <div class="titleEvidencia">
+    <p>Evidencia</p>
+    <img
+      (click)="updateViewStatusF()"
+      *ngIf="!statusFlecha"
+      class="imgFlecha"
+      src="assets/image/iconos/flecha.png"
+      alt=""
+    />
+    <img
+      (click)="updateViewStatusF()"
+      *ngIf="statusFlecha"
+      class="imgFlecha"
+      id="imgFlechaArriba"
+      src="assets/image/iconos/flecha.png"
+      alt=""
+    />
+  </div>
+
+  <div class="containerArchivosPDF" *ngIf="viewStatusF">
+    <nav>
+      <ul>
+        <!--ACTAS PDF-->
+        <li><a><h1>Actas</h1></a>
+          <img
+            (click)="updateViewStatusF2()"
+            *ngIf="!statusFlecha2"
+            class="imgFlecha"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <img
+            (click)="updateViewStatusF2()"
+            *ngIf="statusFlecha2"
+            class="imgFlecha"
+            id="imgFlechaArriba"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+            <ul *ngIf="viewStatusF2">
+              <li class="linkDescarga"
+              (click)="redirectURL(acta.url)"
+              *ngFor="let acta of actas" >
+                <a>
+                {{ acta.name }}
+                </a>
+              </li>
+            </ul>
+        </li>
+        <!--FIN ACTAS PDF-->
+
+        <!--CERFTICADO DE CAPACITACION PDF-->
+        <li><a ><h1>Certificado de Capacitación</h1></a>
+          <img
+            (click)="updateViewStatusF3()"
+            *ngIf="!statusFlecha3"
+            class="imgFlecha"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <img
+            (click)="updateViewStatusF3()"
+            *ngIf="statusFlecha3"
+            class="imgFlecha"
+            id="imgFlechaArriba"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+            <ul *ngIf="viewStatusF3">
+              <li class="linkDescarga"
+              (click)="redirectURL(certificado.url)"
+              *ngFor="let certificado of certificados" >
+                <a>
+                {{ certificado.name }}
+                </a>
+              </li>
+            </ul>
+        </li>
+        <!--FIN CERFTICADO DE CAPACITACION PDF-->
+
+        <!--EVALUACIONES PDF-->
+        <li><a ><h1>Evaluaciones</h1></a>
+          <img
+            (click)="updateViewStatusF4()"
+            *ngIf="!statusFlecha4"
+            class="imgFlecha"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <img
+            (click)="updateViewStatusF4()"
+            *ngIf="statusFlecha4"
+            class="imgFlecha"
+            id="imgFlechaArriba"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+            <ul *ngIf="viewStatusF4">
+              <li class="linkDescarga"
+              (click)="redirectURL(evalu.url)"
+              *ngFor="let evalu of evaluaciones" >
+                <a>
+                {{ evalu.name }}
+                </a>
+              </li>
+            </ul>
+        </li>
+        <!--FIN EVALUACIONES PDF-->
+
+        <!--OTROS DOCUMENTOS PDF-->
+        <li><a ><h1>Otros documentos</h1></a>
+          <img
+            (click)="updateViewStatusF5()"
+            *ngIf="!statusFlecha5"
+            class="imgFlecha"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <img
+            (click)="updateViewStatusF5()"
+            *ngIf="statusFlecha5"
+            class="imgFlecha"
+            id="imgFlechaArriba"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+            <ul *ngIf="viewStatusF5">
+              <li class="linkDescarga"
+              (click)="redirectURL(otros.url)"
+              *ngFor="let otros of otrosDocumento" >
+                <a>
+                {{ otros.name }}
+                </a>
+              </li>
+            </ul>
+        </li>
+        <!--FIN EVALUACIONES PDF-->
+      </ul>
+    </nav>
+  </div>
+  <div class="linea"></div>
+</div>
+
+
+
+
+<app-form-contact>
+</app-form-contact>
+
+<app-footer>
+</app-footer>
+
+
+

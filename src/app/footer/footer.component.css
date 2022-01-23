@@ -1,0 +1,144 @@
+.containerFooter {
+  width: 100%;
+  height: 300px;
+  background-color: rosybrown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background-color: rgba(253, 206, 7, 0.658);*/
+  background-color: #88dfff;
+}
+
+img {
+  width: 90%;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 49%;
+  height: 99%;
+}
+
+.containerInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 49%;
+  height: 99%;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background-color: rgba(253, 206, 7, 0.658);*/
+  background-color: #88dfff;
+  color: rgb(125, 125, 127);
+  height: 40px;
+  font-weight: 700;
+  text-align: center;
+  border: 1px solid rgb(125, 125, 127);
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.imgIcon {
+  width: 45px;
+  height: 45px;
+  margin-right: 5px;
+}
+
+.imgIcon:hover {
+  width: 55px;
+  height: 55px;
+}
+
+.imgText {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 400px;
+  margin: 7px;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(125, 125, 127);
+  font-weight: 700;
+}
+
+@media screen and (max-width: 850px) {
+  .containerFooter {
+    flex-direction: column;
+    height: auto;
+    padding-top: 5px;
+  }
+
+  .logoContainer {
+    width: 70%;
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+
+  .containerInfo {
+    width: 99.8%;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .logoContainer {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .containerFooter {
+    flex-direction: column;
+    height: auto;
+    padding-top: 5px;
+  }
+
+  .logoContainer {
+    width: 97%;
+  }
+
+  .containerInfo {
+    width: 99.8%;
+  }
+
+  .imgText {
+    width: auto;
+  }
+
+  .containerInfo {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 99%;
+    height: 99%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .imgText {
+    width: auto;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .imgText {
+    width: auto;
+    font-size: 10px;
+  }
+}
+

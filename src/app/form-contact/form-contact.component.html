@@ -1,0 +1,21 @@
+
+<div id="id-contacto" class="containerForm">
+    <div class="message">
+        <p class="textMessage">
+            Atención personalizada vía Whatsapp <br />¡Contactanos!
+        </p>
+    </div>
+
+    <form class="formContact" [formGroup]="formContact" (ngSubmit)="getForm()">
+
+        <p class="textMessage">Reserva tu cita</p>
+
+        <div class="mesaggeError" *ngIf="mesaggeError">Complete los campos</div>
+        <input class="formInput" type="text" placeholder="Nombres y Apellidos" maxlength="150" required formControlName="inputName" />
+        <input class="formInput" type="number" placeholder="Número de celular" max="99999999999" required formControlName="inputTel" />
+        <input class="formInput" type="text" placeholder="Mensaje" required formControlName="inputMessage" />
+
+        <button class="formButton" type="submit">Enviar mensaje <img src="assets/image/whatsapp.png" alt=""></button>
+
+    </form>
+</div>

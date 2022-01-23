@@ -1,0 +1,202 @@
+.containerTittle {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+
+  background-image: url("src/assets/image/imgPPSS.jpg");
+  background-repeat: no-repeat;
+  background-position: 20% 45%;
+  background-size: 100% auto;
+}
+
+.textTittle {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  color: black;
+  font-size: 35px;
+}
+
+@media screen and (max-width: 400px) {
+  .containerTittle {
+    background-position: 20% 45%;
+    background-size: auto 100%;
+  }
+}
+
+.containerPP {
+  width: 99.8%;
+  height: auto;
+}
+
+.containerPP {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.containerPP:hover {
+  /*background-color: rgba(253, 206, 7, 0.658);*/
+  background-color: #88dfff;
+  border-radius: 8px;
+}
+
+.textPoliticas:hover {
+  font-size: 24px;
+}
+
+.textPoliticas {
+  color: rgb(125, 125, 127);
+  font-size: 22px;
+  text-align: justify;
+  margin: 20px;
+}
+
+
+@media screen and (max-width: 650px) {
+
+  .containerPP {
+    width: 95%;
+  }
+}
+
+.containerEvidencia {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.titleEvidencia{
+  font-weight: 700;
+  /*background-color: rgba(253, 206, 7, 0.658);*/
+  background-color: #88dfff;
+  color: rgb(37, 37, 36);
+  font-size: 23px;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+}
+
+.containerArchivosPDF{
+
+  height: auto;
+
+  display: flex;
+  align-items:flex-start ;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  width: 90%;
+  margin-top: 8px;
+  border-radius: 8px;
+}
+
+.linkDescarga{
+  text-align: start;
+  margin: 10px;
+  text-decoration: none;
+  color: rgb(125, 125, 127);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.linkDescarga:hover{
+  color: rgb(68, 68, 231);
+  font-size: 22px;
+}
+
+.linea{
+  margin: auto;
+  /*border: 2px solid rgba(253, 206, 7, 0.658);*/
+  border: 2px solid #88dfff;
+  width: 90%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.imgFlecha{
+  width: 20px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+#imgFlechaArriba{
+  transform: rotate(-180deg);
+}
+
+
+/* PDF */
+
+#menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menu ul a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 15px;
+  padding: 10px;
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#menu ul li {
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+#menu ul li:hover {
+  background: #5b78a7;
+}
+
+#menu ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0;
+}
+
+#menu ul ul li {
+  float: none;
+  width: 150px;
+}
+
+#menu ul ul a {
+  line-height: 120%;
+  padding: 10px 15px;
+}
+
+#menu ul li:hover > ul {
+  display: block;
+}
+
+/* FLECHA */
+.imgFlecha{
+  width: 20px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+#imgFlechaArriba{
+  transform: rotate(-180deg);
+}
