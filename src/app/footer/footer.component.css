@@ -5,8 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /*background-color: rgba(253, 206, 7, 0.658);*/
-  background-color: #88dfff;
+  background-color: rgba(253, 206, 7, 0.658);
 }
 
 img {
@@ -34,8 +33,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*background-color: rgba(253, 206, 7, 0.658);*/
-  background-color: #88dfff;
+  background-color: rgba(253, 206, 7, 0.658);
   color: rgb(125, 125, 127);
   height: 40px;
   font-weight: 700;

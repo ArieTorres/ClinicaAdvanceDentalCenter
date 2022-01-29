@@ -5,7 +5,7 @@
   display: inline-block;
   text-align: center;
 
-  background-image: url("src/assets/image/fondoNosotros.jpg");
+  background-image: url("src/assets/image/doctorMascarilla.jpg");
   background-repeat: no-repeat;
   background-position: 20% 45%;
   background-size: 100% auto;
@@ -17,7 +17,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   font-weight: 700;
-  color: black;
+  color: white;
   font-size: 35px;
 }
 
@@ -44,8 +44,7 @@
 }
 
 .containerNosotros:hover {
-  /*background-color: rgba(253, 206, 7, 0.658);*/
-  background-color: #88dfff;
+  background-color: rgba(253, 206, 7, 0.658);
   border-radius: 8px;
 }
 
@@ -115,8 +114,7 @@
 
 .titleFinanciero{
   font-weight: 700;
-  /*background-color: rgba(253, 206, 7, 0.658);*/
-  background-color: #88dfff;
+  background-color: rgba(253, 206, 7, 0.658);
   color: rgb(37, 37, 36);
   font-size: 23px;
   text-align: center;
@@ -158,8 +156,7 @@
 
 .linea{
   margin: auto;
-  /*border: 2px solid rgba(253, 206, 7, 0.658);*/
-  border: 2px solid #88dfff;
+  border: 2px solid rgba(253, 206, 7, 0.658);
   width: 90%;
   margin-top: 15px;
   margin-bottom: 15px;

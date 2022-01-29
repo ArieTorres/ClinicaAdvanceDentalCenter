@@ -2,7 +2,7 @@ nav {
   height: 700px;
   width: 100%;
 
-  background-image: url("src/assets/image/fondo3.jpg");
+  background-image: url("src/assets/image/portadaInicio.jpg");
   background-repeat: no-repeat;
   background-position: 20% 50%;
   background-size: 100% auto;
@@ -60,7 +60,7 @@ a {
 }
 
 a:hover {
-  background-color: rgba(223, 223, 223, 0.4);  
+  background-color: rgba(228, 224, 24, 0.4);
   color: white;
 }
 
@@ -103,8 +103,8 @@ a:hover {
 }
 
 @media screen and (max-width: 1156px) {
-  nav {    
-    background-image: url("src/assets/image/fondo3.jpg");
+  nav {
+    background-image: url("src/assets/image/portadaInicio.jpg");
     background-repeat: no-repeat;
     background-position: 20% 50%;
     background-size: auto 100%;
