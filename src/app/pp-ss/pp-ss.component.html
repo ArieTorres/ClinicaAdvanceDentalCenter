@@ -1,5 +1,4 @@
-<app-nav-simple>
-</app-nav-simple>
+<app-nav-simple> </app-nav-simple>
 
 <div class="containerTittle">
   <p class="textTittle">Política de Participación Social en Salud</p>
@@ -8,21 +7,25 @@
 <div class="containerPP">
   <div class="containerPoliticas">
     <p class="textPoliticas">
-        ¿Qué dice la norma y la LEY ESTATUTARIA DE SALUD (LES) en relación con el derecho a la participación en salud?
-        <br><br>
-        Es necesario recordar que la Ley 100 de 1993, en su artículo 153, modificado por el artículo 3 de la Ley 1438 de 2011,
-        estableció como principio del Sistema General de Seguridad Social en Salud, en su numeral 3.10, la participación social,
-        que es la intervención de la comunidad en la organización, control, gestión y fiscalización de las instituciones y
-        del Sistema en conjunto.
-        <br><br>
-        Y para tal efecto se reglamentó el Decreto 1757 de 1994, compilado en la parte 10 capítulo 1 título 1 del artículo
-        2.10.1.1.1 del Decreto Único 780 de 2016.
+      ¿Qué dice la norma y la LEY ESTATUTARIA DE SALUD (LES) en relación con el
+      derecho a la participación en salud?
+      <br /><br />
+      Es necesario recordar que la Ley 100 de 1993, en su artículo 153,
+      modificado por el artículo 3 de la Ley 1438 de 2011, estableció como
+      principio del Sistema General de Seguridad Social en Salud, en su numeral
+      3.10, la participación social, que es la intervención de la comunidad en
+      la organización, control, gestión y fiscalización de las instituciones y
+      del Sistema en conjunto.
+      <br /><br />
+      Y para tal efecto se reglamentó el Decreto 1757 de 1994, compilado en la
+      parte 10 capítulo 1 título 1 del artículo 2.10.1.1.1 del Decreto Único 780
+      de 2016.
     </p>
   </div>
 </div>
 
-<br>
-<br>
+<br />
+<br />
 
 <div class="containerEvidencia">
   <div class="titleEvidencia">
@@ -45,97 +48,277 @@
   </div>
 
   <div class="containerArchivosPDF" *ngIf="viewStatusF">
-    <nav>
+    <nav *ngIf="status2023">
+      <p class="tittleAnio">2023</p>
       <ul>
-        <!--ACTAS PDF-->
-        <li><a><h1>Actas</h1></a>
+        <li>
+          <a><h1>Actas</h1></a>
           <img
-            (click)="updateViewStatusF2()"
-            *ngIf="!statusFlecha2"
+            (click)="updateViewStatusF9()"
+            *ngIf="!statusFlecha9"
             class="imgFlecha"
             src="assets/image/iconos/flecha.png"
             alt=""
           />
           <img
-            (click)="updateViewStatusF2()"
-            *ngIf="statusFlecha2"
-            class="imgFlecha"
-            id="imgFlechaArriba"
-            src="assets/image/iconos/flecha.png"
-            alt=""
-          />
-            <ul *ngIf="viewStatusF2">
-              <li class="linkDescarga"
-              (click)="redirectURL(acta.url)"
-              *ngFor="let acta of actas" >
-                <a>
-                {{ acta.name }}
-                </a>
-              </li>
-            </ul>
-        </li>
-        <!--FIN ACTAS PDF-->
-
-        <!--CERFTICADO DE CAPACITACION PDF-->
-        <li><a ><h1>Certificado de Capacitación</h1></a>
-          <img
-            (click)="updateViewStatusF3()"
-            *ngIf="!statusFlecha3"
-            class="imgFlecha"
-            src="assets/image/iconos/flecha.png"
-            alt=""
-          />
-          <img
-            (click)="updateViewStatusF3()"
-            *ngIf="statusFlecha3"
+            (click)="updateViewStatusF9()"
+            *ngIf="statusFlecha9"
             class="imgFlecha"
             id="imgFlechaArriba"
             src="assets/image/iconos/flecha.png"
             alt=""
           />
-            <ul *ngIf="viewStatusF3">
-              <li class="linkDescarga"
-              (click)="redirectURL(certificado.url)"
-              *ngFor="let certificado of certificados" >
+          <ul *ngIf="viewStatusF9">
+            <div *ngFor="let ppss of ppss2023">
+              <li
+                *ngIf="ppss.type == '1'"
+                class="linkDescarga"
+                (click)="redirectURL(ppss.url)"
+              >
                 <a>
-                {{ certificado.name }}
+                  {{ ppss.name }}
                 </a>
               </li>
-            </ul>
+            </div>
+          </ul>
         </li>
-        <!--FIN CERFTICADO DE CAPACITACION PDF-->
 
-        <!--EVALUACIONES PDF-->
-        <li><a ><h1>Evaluaciones</h1></a>
+        <li>
+          <a><h1>Certificados de capacitación</h1></a>
           <img
-            (click)="updateViewStatusF4()"
-            *ngIf="!statusFlecha4"
+            (click)="updateViewStatusF11()"
+            *ngIf="!statusFlecha11"
             class="imgFlecha"
             src="assets/image/iconos/flecha.png"
             alt=""
           />
           <img
-            (click)="updateViewStatusF4()"
-            *ngIf="statusFlecha4"
+            (click)="updateViewStatusF11()"
+            *ngIf="statusFlecha11"
             class="imgFlecha"
             id="imgFlechaArriba"
             src="assets/image/iconos/flecha.png"
             alt=""
           />
-            <ul *ngIf="viewStatusF4">
-              <li class="linkDescarga"
-              (click)="redirectURL(evalu.url)"
-              *ngFor="let evalu of evaluaciones" >
+          <ul *ngIf="viewStatusF11">
+            <div *ngFor="let ppss of ppss2023">
+              <li
+                *ngIf="ppss.type == '2'"
+                class="linkDescarga"
+                (click)="redirectURL(ppss.url)"
+              >
                 <a>
-                {{ evalu.name }}
+                  {{ ppss.name }}
                 </a>
               </li>
-            </ul>
+            </div>
+          </ul>
         </li>
-        <!--FIN EVALUACIONES PDF-->
 
-        <!--OTROS DOCUMENTOS PDF-->
-        <li><a ><h1>Otros documentos</h1></a>
+        <li>
+          <a><h1>Evaluaciones</h1></a>
+          <img
+            (click)="updateViewStatusF16()"
+            *ngIf="!statusFlecha16"
+            class="imgFlecha"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <img
+            (click)="updateViewStatusF16()"
+            *ngIf="statusFlecha16"
+            class="imgFlecha"
+            id="imgFlechaArriba"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <ul *ngIf="viewStatusF16">
+            <div *ngFor="let ppss of ppss2023">
+              <li
+                *ngIf="ppss.type == '3'"
+                class="linkDescarga"
+                (click)="redirectURL(ppss.url)"
+              >
+                <a>
+                  {{ ppss.name }}
+                </a>
+              </li>
+            </div>
+          </ul>
+        </li>
+
+        <li>
+          <a><h1>Otros Documentos</h1></a>
+          <img
+            (click)="updateViewStatusF10()"
+            *ngIf="!statusFlecha10"
+            class="imgFlecha"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <img
+            (click)="updateViewStatusF10()"
+            *ngIf="statusFlecha10"
+            class="imgFlecha"
+            id="imgFlechaArriba"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <ul *ngIf="viewStatusF10">
+            <div *ngFor="let ppss of ppss2023">
+              <li
+                *ngIf="ppss.type == '4'"
+                class="linkDescarga"
+                (click)="redirectURL(ppss.url)"
+              >
+                <a>
+                  {{ ppss.name }}
+                </a>
+              </li>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <nav *ngIf="status2022">
+      <p class="tittleAnio">2022</p>
+      <ul>
+        <li>
+          <a><h1>Actas</h1></a>
+          <img
+            (click)="updateViewStatusF7()"
+            *ngIf="!statusFlecha7"
+            class="imgFlecha"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <img
+            (click)="updateViewStatusF7()"
+            *ngIf="statusFlecha7"
+            class="imgFlecha"
+            id="imgFlechaArriba"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <ul *ngIf="viewStatusF7">
+            <div *ngFor="let ppss of ppss2022">
+              <li
+                *ngIf="ppss.type == '1'"
+                class="linkDescarga"
+                (click)="redirectURL(ppss.url)"
+              >
+                <a>
+                  {{ ppss.name }}
+                </a>
+              </li>
+            </div>
+          </ul>
+        </li>
+
+        <li>
+          <a><h1>Certificados de capacitación</h1></a>
+          <img
+            (click)="updateViewStatusF12()"
+            *ngIf="!statusFlecha12"
+            class="imgFlecha"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <img
+            (click)="updateViewStatusF12()"
+            *ngIf="statusFlecha12"
+            class="imgFlecha"
+            id="imgFlechaArriba"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <ul *ngIf="viewStatusF12">
+            <div *ngFor="let ppss of ppss2022">
+              <li
+                *ngIf="ppss.type == '2'"
+                class="linkDescarga"
+                (click)="redirectURL(ppss.url)"
+              >
+                <a>
+                  {{ ppss.name }}
+                </a>
+              </li>
+            </div>
+          </ul>
+        </li>
+
+        <li>
+          <a><h1>Evaluaciones</h1></a>
+          <img
+            (click)="updateViewStatusF17()"
+            *ngIf="!statusFlecha17"
+            class="imgFlecha"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <img
+            (click)="updateViewStatusF17()"
+            *ngIf="statusFlecha17"
+            class="imgFlecha"
+            id="imgFlechaArriba"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <ul *ngIf="viewStatusF17">
+            <div *ngFor="let ppss of ppss2022">
+              <li
+                *ngIf="ppss.type == '3'"
+                class="linkDescarga"
+                (click)="redirectURL(ppss.url)"
+              >
+                <a>
+                  {{ ppss.name }}
+                </a>
+              </li>
+            </div>
+          </ul>
+        </li>
+
+        <li>
+          <a><h1>Otros Documentos</h1></a>
+          <img
+            (click)="updateViewStatusF8()"
+            *ngIf="!statusFlecha8"
+            class="imgFlecha"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <img
+            (click)="updateViewStatusF8()"
+            *ngIf="statusFlecha8"
+            class="imgFlecha"
+            id="imgFlechaArriba"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <ul *ngIf="viewStatusF8">
+            <div *ngFor="let ppss of ppss2022">
+              <li
+                *ngIf="ppss.type == '4'"
+                class="linkDescarga"
+                (click)="redirectURL(ppss.url)"
+              >
+                <a>
+                  {{ ppss.name }}
+                </a>
+              </li>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <nav *ngIf="status2021">
+      <p class="tittleAnio">2021</p>
+      <ul>
+        <li>
+          <a><h1>Actas</h1></a>
           <img
             (click)="updateViewStatusF5()"
             *ngIf="!statusFlecha5"
@@ -151,31 +334,388 @@
             src="assets/image/iconos/flecha.png"
             alt=""
           />
-            <ul *ngIf="viewStatusF5">
-              <li class="linkDescarga"
-              (click)="redirectURL(otros.url)"
-              *ngFor="let otros of otrosDocumento" >
+          <ul *ngIf="viewStatusF5">
+            <div *ngFor="let ppss of ppss2021">
+              <li
+                *ngIf="ppss.type == '1'"
+                class="linkDescarga"
+                (click)="redirectURL(ppss.url)"
+              >
                 <a>
-                {{ otros.name }}
+                  {{ ppss.name }}
                 </a>
               </li>
-            </ul>
+            </div>
+          </ul>
         </li>
-        <!--FIN EVALUACIONES PDF-->
+
+        <li>
+          <a><h1>Certificados de capacitación</h1></a>
+          <img
+            (click)="updateViewStatusF13()"
+            *ngIf="!statusFlecha13"
+            class="imgFlecha"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <img
+            (click)="updateViewStatusF13()"
+            *ngIf="statusFlecha13"
+            class="imgFlecha"
+            id="imgFlechaArriba"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <ul *ngIf="viewStatusF13">
+            <div *ngFor="let ppss of ppss2021">
+              <li
+                *ngIf="ppss.type == '2'"
+                class="linkDescarga"
+                (click)="redirectURL(ppss.url)"
+              >
+                <a>
+                  {{ ppss.name }}
+                </a>
+              </li>
+            </div>
+          </ul>
+        </li>
+
+        <li>
+          <a><h1>Evaluaciones</h1></a>
+          <img
+            (click)="updateViewStatusF18()"
+            *ngIf="!statusFlecha18"
+            class="imgFlecha"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <img
+            (click)="updateViewStatusF18()"
+            *ngIf="statusFlecha18"
+            class="imgFlecha"
+            id="imgFlechaArriba"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <ul *ngIf="viewStatusF18">
+            <div *ngFor="let ppss of ppss2021">
+              <li
+                *ngIf="ppss.type == '3'"
+                class="linkDescarga"
+                (click)="redirectURL(ppss.url)"
+              >
+                <a>
+                  {{ ppss.name }}
+                </a>
+              </li>
+            </div>
+          </ul>
+        </li>
+
+        <li>
+          <a><h1>Otros Documentos</h1></a>
+          <img
+            (click)="updateViewStatusF6()"
+            *ngIf="!statusFlecha6"
+            class="imgFlecha"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <img
+            (click)="updateViewStatusF6()"
+            *ngIf="statusFlecha6"
+            class="imgFlecha"
+            id="imgFlechaArriba"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <ul *ngIf="viewStatusF6">
+            <div *ngFor="let ppss of ppss2021">
+              <li
+                *ngIf="ppss.type == '4'"
+                class="linkDescarga"
+                (click)="redirectURL(ppss.url)"
+              >
+                <a>
+                  {{ ppss.name }}
+                </a>
+              </li>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <nav *ngIf="status2020">
+      <p class="tittleAnio">2020</p>
+      <ul>
+        <li>
+          <a><h1>Actas</h1></a>
+          <img
+            (click)="updateViewStatusF3()"
+            *ngIf="!statusFlecha3"
+            class="imgFlecha"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <img
+            (click)="updateViewStatusF3()"
+            *ngIf="statusFlecha3"
+            class="imgFlecha"
+            id="imgFlechaArriba"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <ul *ngIf="viewStatusF3">
+            <div *ngFor="let ppss of ppss2020">
+              <li
+                *ngIf="ppss.type == '1'"
+                class="linkDescarga"
+                (click)="redirectURL(ppss.url)"
+              >
+                <a>
+                  {{ ppss.name }}
+                </a>
+              </li>
+            </div>
+          </ul>
+        </li>
+
+        <li>
+          <a><h1>Certificados de capacitación</h1></a>
+          <img
+            (click)="updateViewStatusF14()"
+            *ngIf="!statusFlecha14"
+            class="imgFlecha"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <img
+            (click)="updateViewStatusF14()"
+            *ngIf="statusFlecha14"
+            class="imgFlecha"
+            id="imgFlechaArriba"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <ul *ngIf="viewStatusF14">
+            <div *ngFor="let ppss of ppss2020">
+              <li
+                *ngIf="ppss.type == '2'"
+                class="linkDescarga"
+                (click)="redirectURL(ppss.url)"
+              >
+                <a>
+                  {{ ppss.name }}
+                </a>
+              </li>
+            </div>
+          </ul>
+        </li>
+
+        <li>
+          <a><h1>Evaluaciones</h1></a>
+          <img
+            (click)="updateViewStatusF19()"
+            *ngIf="!statusFlecha19"
+            class="imgFlecha"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <img
+            (click)="updateViewStatusF19()"
+            *ngIf="statusFlecha19"
+            class="imgFlecha"
+            id="imgFlechaArriba"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <ul *ngIf="viewStatusF19">
+            <div *ngFor="let ppss of ppss2020">
+              <li
+                *ngIf="ppss.type == '3'"
+                class="linkDescarga"
+                (click)="redirectURL(ppss.url)"
+              >
+                <a>
+                  {{ ppss.name }}
+                </a>
+              </li>
+            </div>
+          </ul>
+        </li>
+
+        <li>
+          <a><h1>Otros Documentos</h1></a>
+          <img
+            (click)="updateViewStatusF4()"
+            *ngIf="!statusFlecha4"
+            class="imgFlecha"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <img
+            (click)="updateViewStatusF4()"
+            *ngIf="statusFlecha4"
+            class="imgFlecha"
+            id="imgFlechaArriba"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <ul *ngIf="viewStatusF4">
+            <div *ngFor="let ppss of ppss2020">
+              <li
+                *ngIf="ppss.type == '4'"
+                class="linkDescarga"
+                (click)="redirectURL(ppss.url)"
+              >
+                <a>
+                  {{ ppss.name }}
+                </a>
+              </li>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <nav *ngIf="status2019">
+      <p class="tittleAnio">2019</p>
+      <ul>
+        <li>
+          <a><h1>Actas</h1></a>
+          <img
+            (click)="updateViewStatusF2()"
+            *ngIf="!statusFlecha2"
+            class="imgFlecha"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <img
+            (click)="updateViewStatusF2()"
+            *ngIf="statusFlecha2"
+            class="imgFlecha"
+            id="imgFlechaArriba"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <ul *ngIf="viewStatusF2">
+            <div *ngFor="let ppss of ppss2019">
+              <li
+                *ngIf="ppss.type == '1'"
+                class="linkDescarga"
+                (click)="redirectURL(ppss.url)"
+              >
+                <a>
+                  {{ ppss.name }}
+                </a>
+              </li>
+            </div>
+          </ul>
+        </li>
+
+        <li>
+          <a><h1>Certificados de capacitación</h1></a>
+          <img
+            (click)="updateViewStatusF15()"
+            *ngIf="!statusFlecha15"
+            class="imgFlecha"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <img
+            (click)="updateViewStatusF15()"
+            *ngIf="statusFlecha15"
+            class="imgFlecha"
+            id="imgFlechaArriba"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <ul *ngIf="viewStatusF15">
+            <div *ngFor="let ppss of ppss2019">
+              <li
+                *ngIf="ppss.type == '2'"
+                class="linkDescarga"
+                (click)="redirectURL(ppss.url)"
+              >
+                <a>
+                  {{ ppss.name }}
+                </a>
+              </li>
+            </div>
+          </ul>
+        </li>
+
+        <li>
+          <a><h1>Evaluaciones</h1></a>
+          <img
+            (click)="updateViewStatusF20()"
+            *ngIf="!statusFlecha20"
+            class="imgFlecha"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <img
+            (click)="updateViewStatusF20()"
+            *ngIf="statusFlecha20"
+            class="imgFlecha"
+            id="imgFlechaArriba"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <ul *ngIf="viewStatusF20">
+            <div *ngFor="let ppss of ppss2019">
+              <li
+                *ngIf="ppss.type == '3'"
+                class="linkDescarga"
+                (click)="redirectURL(ppss.url)"
+              >
+                <a>
+                  {{ ppss.name }}
+                </a>
+              </li>
+            </div>
+          </ul>
+        </li>
+
+        <li>
+          <a><h1>Otros Documentos</h1></a>
+          <img
+            (click)="updateViewStatusF1()"
+            *ngIf="!statusFlecha1"
+            class="imgFlecha"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <img
+            (click)="updateViewStatusF1()"
+            *ngIf="statusFlecha1"
+            class="imgFlecha"
+            id="imgFlechaArriba"
+            src="assets/image/iconos/flecha.png"
+            alt=""
+          />
+          <ul *ngIf="viewStatusF1">
+            <div *ngFor="let ppss of ppss2019">
+              <li
+                *ngIf="ppss.type == '4'"
+                class="linkDescarga"
+                (click)="redirectURL(ppss.url)"
+              >
+                <a>
+                  {{ ppss.name }}
+                </a>
+              </li>
+            </div>
+          </ul>
+        </li>
       </ul>
     </nav>
   </div>
   <div class="linea"></div>
 </div>
 
+<app-form-contact> </app-form-contact>
 
-
-
-<app-form-contact>
-</app-form-contact>
-
-<app-footer>
-</app-footer>
-
-
-
+<app-footer> </app-footer>
